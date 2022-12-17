@@ -1,17 +1,35 @@
-from sklearn.feature_extraction.txt import TfidfVectirizer
+Sent from Mail for Windows
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 from sklearn.metrics.pairwise import cosine_similarity
+
 from nltk.corpus import wordnet
-import bs4as as bs
+
+from bs4  import BeautifulSoup as bs
+
 import warnings
+
 import nltk
+
 import random
+
 import string
+
 import re
-warnings.filterwarnings(&#39;ignore&#39;)
+
+warnings.filterwarnings('ignore')
+
 synonyms = []
-for syn in wordnet.synsets(&#39;Hey!!&#39;):
+
+for syn in wordnet.synsets('Hey!!'):
+
     for lem in syn.lemmas():
-        lem_name = re.sub(r&#39;\[[0-9]*\]&#39;,&#39;&#39;,lem.name())
-        greeting_inputs = [&#39;hey&#39;,&#39;hello&#39;]
+
+        lem_name = re.sub(r'\[[0-9]*\]','',lem.name())
+
+        greeting_inputs = ['hey','hello']
+
         greeting_inputs = greeting_inputs+synonyms
-        covo_inputs =[&#39;how are you&#39;,&#39;how are you doing?&#39;]
+
+        covo_inputs =['how are you','how are you doing?']
